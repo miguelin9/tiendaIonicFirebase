@@ -1,0 +1,16 @@
+<ion-menu [content]="NAV">
+   <ion-content class="fondoMenu">
+    <div text-center class="main">
+       <img width="235px" src="assets/imgs/logo.png">
+    </div>
+    <div class="margen"></div>
+            <ion-list>
+              <button ion-item *ngFor= "let page of pages" class = "items" (click)="goToPage(page.component)" menuClose>
+                <ion-icon item-left  name = "{{ page.icon }}"></ion-icon>
+                {{ page.titulo }}
+              </button>
+            </ion-list>
+    </ion-content>
+  </ion-menu>
+
+<ion-nav #NAV [root]="rootPage" ></ion-nav>

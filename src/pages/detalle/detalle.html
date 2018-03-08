@@ -1,0 +1,28 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Detalle articulo</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <img [src]="articulo.foto">
+    <h2>{{articulo.nombre}}</h2>
+    <table align="center" class="tabla">
+      <tr>
+        <td class="padding">Código: {{articulo.codigo}}</td>
+        <td>Stock: {{articulo.stock}}</td>
+      </tr>
+      <tr>
+          <td class="padding">Categoría: {{articulo.categoria}}</td>
+          <td>Precio: {{articulo.precio}}€</td>
+        </tr>
+    </table>
+  <p class="justificado">{{articulo.descripcion}}</p>
+  <div text-center>
+    <button ion-button (click)="actualizar()">Actualizar</button>
+    <button ion-button (click)="presentConfirm()">Borrar</button>
+  </div>
+</ion-content>
